@@ -1,0 +1,15 @@
+# ignore doc 
+settings.py
+__pycache__/
+~logs/
+# ignore system files
+nohup.out
+*.pyc
+*.pyo
+*.swp
+*.log
+*~
+*.DS_Store
+
+# config files
+.idea/
