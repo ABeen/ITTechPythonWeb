@@ -1,0 +1,10 @@
+{% extends base.html %}
+{% block title %} author {% end %}
+{% block body %}
+
+{{type(data)}}
+    {% for k in data %}
+        {{k}} : {{data[k]}}</br>
+    {% end %}
+
+{% end %}

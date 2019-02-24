@@ -71,7 +71,7 @@ def set_default_value(source_dict, list_key, default_value):
         给 source_dict 字典在无值的时候，设置 list_key 里的默认 default_value
     """
     for key in list_key:
-        source_dict[key] = source_dict.get(key, default_value)
+        source_dict[key] = source_dict.get
     return source_dict
 
 

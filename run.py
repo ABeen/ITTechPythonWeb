@@ -3,7 +3,7 @@ from datetime import datetime
 from pprint import pprint
 from termcolor import colored
 
-from web import run
+from web import run, my_handlers
 
 
 def _show_info(app):
@@ -24,7 +24,7 @@ def _show_info(app):
     handlers = sorted(app.handlers, key=lambda h: h[0])
     pprint(handlers, width='90')
 
-    if app.settings.get("debug"):
+    if app.settings.get:
         print(colored("WARNING", "red", attrs=["bold", "blink"]), ": Debug Mode is True!!!")
 
 
@@ -38,7 +38,7 @@ def _get_opt():
 
 def main():
     opts, args = _get_opt()
-    run(debug=opts.debug, port=opts.port, callback=_show_info)
+    run(debug=opts.debug, port=opts.port, handlers=my_handlers, callback=_show_info)
 
 
 if __name__ == '__main__':
